@@ -1,0 +1,39 @@
+package me.pedro;
+
+import java.util.Scanner;
+
+public class Q01 {
+	
+	public static void main(String[] args) {
+		//Leitura da entrada de dados do usuario 
+		Scanner reader = new Scanner(System.in);
+		int n = reader.nextInt();
+		//Encerramento do scanner
+		reader.close();
+		
+		//Loop com o objetivo de escrever as linhas da escada
+		for (int i = 1; i <= n; i++) {
+			
+			//Variavel que armazenara as string tipo espaço
+			String espaco = "";
+			//Variavel que armazenara as string tipo asteristico
+			String asterisco = "";
+			
+			//Segundo o enunciado a quantidadede linhas-linha_atual-1 sera a quantidade de espaços
+			for (int j = 0; j < (n-i); j++) {
+				espaco+= " ";
+			}
+			//A linha_atual define a quantidade de espaços
+			for (int j = 0; j < i; j++) {
+				asterisco+= "*";
+			}
+			
+			//Escrever cada linha da escada
+			System.out.print(espaco);
+			System.out.println(asterisco);
+		}
+		
+        
+	}
+
+}
